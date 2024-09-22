@@ -14,7 +14,10 @@ const App = () => {
 
     try {
       const inputData = JSON.parse(input);
-      const res = await axios.post("http://localhost:3000/bfhl", inputData);
+      const res = await axios.post(
+        "https://bajaj0021-backend-1.onrender.com/bfhl",
+        inputData
+      );
       setResponse(res.data);
     } catch (err) {
       setError("Invalid JSON input or API error");
